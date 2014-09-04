@@ -13,17 +13,17 @@ module Quipper
         @api_secret = ENV["MIXPANEL_API_SECRET"]
       end
 
-      def export(event, args)
+      def export(path, args)
         params = args.clone
         params["api_key"] = @api_key
         params["format"] = 'json'
         params["expire"] = Time.now.to_i + 600
         params["sig"] = generate_signature(params)
 
-        self.class.get("https://data.mixpanel.com" + event + "?" + encode(params))
+        self.class.get("https://data.mixpanel.com" + path + "?" + encode(params))
       end
 
-      def api(event, args)
+      def api(path, args)
         params = args.clone
         params["api_key"] = @api_key
         params["format"] = 'json'
@@ -32,7 +32,7 @@ module Quipper
         params["page"] = args[:page] if args[:page]
         params["session_id"] = args[:session_id] if args[:session_id]
 
-        self.class.get("https://mixpanel.com" + event + "?" + encode(params))
+        self.class.get("https://mixpanel.com" + path + "?" + encode(params))
       end
 
 
