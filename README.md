@@ -1,6 +1,6 @@
 # Quipper::Mixpanel::Exporter
 
-Client library of Mixpanel Data Export API.
+Client library of Mixpanel Data Export API (NOT OFFICIAL).
 
 ## Installation
 

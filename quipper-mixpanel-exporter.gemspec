@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Quipper::Mixpanel::Exporter::VERSION
   spec.authors       = ["Masatomo Nakano"]
   spec.email         = ["tomo@quipper.com"]
-  spec.summary       = %q{Client library of Mixpanel Data Export API.}
-  spec.description   = %q{Client library of Mixpanel Data Export API.}
+  spec.summary       = %q{Client library of Mixpanel Data Export API (NOT OFFICIAL).}
+  spec.description   = %q{Client library of Mixpanel Data Export API (NOT OFFICIAL).}
   spec.homepage      = ""
   spec.license       = "MIT"
 
