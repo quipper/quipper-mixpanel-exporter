@@ -6,10 +6,10 @@ require 'quipper/mixpanel/exporter/version'
 Gem::Specification.new do |spec|
   spec.name          = "quipper-mixpanel-exporter"
   spec.version       = Quipper::Mixpanel::Exporter::VERSION
-  spec.authors       = ["Kensuke Nagae"]
-  spec.email         = ["kyanny@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Masatomo Nakano"]
+  spec.email         = ["tomo@quipper.com"]
+  spec.summary       = %q{Client library of Mixpanel Data Export API.}
+  spec.description   = %q{Client library of Mixpanel Data Export API.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "httparty"
+
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
 end
