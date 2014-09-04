@@ -22,18 +22,19 @@ ENV['MIXPANEL_API_SECRET'] = "XXXXXXXXXXXXXXXX"
 
 exporter = Quipper::Mixpanel::Exporter.new
 
-p exporter.api("/api/2.0/events/name", {})
+p exporter.api("/api/2.0/events/names", {})
 p exporter.api("/api/2.0/segmentation/", {
   event: 'user_performed_awesome_action',
-  from_date: '2014-08-1',
+  from_date: '2014-08-01',
   to_date: '2014-08-31',
   on: 'properties["id"]',
-  limit: 10000,
+  limit: 200,
 })
 
 p exporter.export("/api/2.0/export/", {
-  from_date: '2014-08-1',
-  to_date: '2014-08-31',
+  from_date: '2014-09-01',
+  to_date: '2014-09-01',
+  event: ['user_performed_awesome_action'],
 })
 ```
 

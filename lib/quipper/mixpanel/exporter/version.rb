@@ -1,6 +1,6 @@
 module Quipper
   module Mixpanel
-    module Exporter
+    class Exporter
       VERSION = "0.0.1"
     end
   end
